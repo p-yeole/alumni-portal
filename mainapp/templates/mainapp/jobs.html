@@ -1,0 +1,21 @@
+{% extends 'mainapp/base.html' %} {% load static %} {% block content %}
+<div class="heading">
+  <div class="heading_text"><span>Job</span>Opportunitites</div>
+  <div class="heading_dash"></div>
+</div>
+<div class="container">
+  <div class="row">
+    {% for job in jobs %}
+    <div class="product">
+      <h1>{{ job.company }}</h1>
+      <h3>{{ job.title }} | {{ job.location }}</h3>
+      <h3>{{ job.ctc }}</h3>
+      <span>{{ job.description }}</span>
+      <a href="mailto:{{ job.mailto }}"
+        ><div class="price">Send Resume Now!</div></a
+      >
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

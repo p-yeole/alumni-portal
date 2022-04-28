@@ -1,0 +1,19 @@
+{% extends 'mainapp/base.html' %} {% load static %} {% block content %}
+<div class="heading">
+  <div class="heading_text"><span>Upcoming</span>Events</div>
+  <div class="heading_dash"></div>
+</div>
+<div class="container">
+  <div class="row">
+    {% for event in events %}
+    <div class="product">
+      <img src="{{ event.url }}" />
+      <h1>{{ event.name }}</h1>
+      <h3>{{ event.schedule }}</h3>
+      <span> {{ event.description }} </span>
+      <div class="price">Register Now!</div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

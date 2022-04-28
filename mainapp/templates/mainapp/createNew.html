@@ -1,0 +1,32 @@
+{% extends 'mainapp/base.html' %} {% load static %} {% block content %}
+<div class="heading">
+  <div class="heading_text"><span>Create</span>New</div>
+  <div class="heading_dash"></div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="card1 col">
+      <div class="content">
+        <h2>Event</h2>
+        <h3>Create Event</h3>
+        <p>
+          Endorse your company outreach programs, workshops, seminars and career
+          fair here. Strictly for student oriented activities.
+        </p>
+        <a href="{% url 'create-event' %}">Get Started</a>
+      </div>
+    </div>
+    <div class="card1 col">
+      <div class="content">
+        <h2>Job</h2>
+        <h3>Create Job</h3>
+        <p>
+          Let your juniors benefit from the openings at your organizations by
+          providing referals to deserving students.
+        </p>
+        <a href="{% url 'create-job' %}">Get Started</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'mainapp/base.html' %} {% load static %} {% load crispy_forms_tags %}
+{% block content %}
+<div class="form mt-4">
+  <form method="POST">
+    {% csrf_token %}
+    <fieldset class="form-group">
+      <div class="heading mb-4">
+        <div class="heading_text"><span>Register</span></div>
+        <div class="heading_dash"></div>
+      </div>
+      {{ form|crispy }}
+    </fieldset>
+    <div class="form-group">
+      <button class="btn btn-outline-info" type="submit">Register!</button>
+    </div>
+    <p class="message">Registered already? <a href="#">Login!</a></p>
+  </form>
+</div>
+{% endblock content %}

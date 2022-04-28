@@ -1,0 +1,19 @@
+{% extends 'mainapp/base.html' %} {% load static %} {% block content %}
+
+<div class="about_us">
+  <div class="heading">
+    <div class="heading_text"><span>Logged Out</span>Successfully</div>
+    <div class="heading_dash"></div>
+  </div>
+  <div class="about_us_section">
+    <div class="about_us_paras">
+      <p>You've logged out successfully, this session has now expired.</p>
+    </div>
+    <div class="ml-5 mb-5 form-group">
+        <a href="{% url 'home-page' %}"><button class="btn btn-outline-info" type="submit">Home</button>
+        <a href="{% url 'login' %}"><button class="btn btn-outline-info" type="submit">Log in</button>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

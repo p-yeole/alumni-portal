@@ -1,0 +1,126 @@
+{% extends 'mainapp/base.html' %} {% load static %} {% block content %}
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li
+      data-target="#carouselExampleIndicators"
+      data-slide-to="0"
+      class="active"
+    ></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img
+        class="d-block w-100"
+        src="{% static 'images/slide1.jpg' %}"
+        alt="First slide"
+      />
+    </div>
+    <div class="carousel-item">
+      <img
+        class="d-block w-100"
+        src="{% static 'images/slide1.jpg' %}"
+        alt="Second slide"
+      />
+    </div>
+    <div class="carousel-item">
+      <img
+        class="d-block w-100"
+        src="{% static 'images/slide1.jpg' %}"
+        alt="Third slide"
+      />
+    </div>
+  </div>
+  <a
+    class="carousel-control-prev"
+    href="#carouselExampleIndicators"
+    role="button"
+    data-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a
+    class="carousel-control-next"
+    href="#carouselExampleIndicators"
+    role="button"
+    data-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<div class="about_us">
+  <div class="heading">
+    <div class="heading_text"><span>KJSIEIT</span>Alumni</div>
+    <div class="heading_dash"></div>
+  </div>
+  <div class="about_us_section">
+    <div class="image_section">
+      <img src="{%static 'images/college.jpg' %}" />
+    </div>
+    <div class="about_us_paras">
+      <p>
+        KJSIEIT has been committed to connect and create a dedicated and
+        committed community of The KJSIEIT - Alumni to support the institution —
+        in form of resources, donations and guest lecturers in its quest to
+        become a premier Institution.
+      </p>
+      <p>
+        The faculty network endeavors to motivate alumni to participate in
+        various institute activities in the loop. It aims to keep the Alumni
+        records updated in the database. The Alumni connect also ensures that
+        the Alums are kept updated about the different ventures and activities
+        of the college.
+      </p>
+      <p>
+        We hold a strong alumni base and with better networking, we take a pride
+        in hosting many of our alumni to contribute towards their Alma Mater
+        while honoring them of their achievements!
+      </p>
+    </div>
+  </div>
+  <div class="vision_mission">
+    <div class="vison">
+      <div class="heading">
+        <div class="heading_text"><span>Our</span>Vision</div>
+        <div class="heading_dash"></div>
+      </div>
+      <p>
+        To be universally accepted as a synonym of quality, excellence and
+        commitment in the field of engineering education by nurturing talent and
+        transforming young minds to realize their potential and become future
+        ready engineers
+      </p>
+    </div>
+    <div class="mission">
+      <div class="heading">
+        <div class="heading_text"><span>Our</span>Mission</div>
+        <div class="heading_dash"></div>
+      </div>
+      <p>
+        To provide students with an extensive knowledge of engineering to refine
+        their professional skills. To train students to be industry ready and
+        capable of working effectively as an individual and in a team.
+      </p>
+    </div>
+  </div>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+    integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+    integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+    crossorigin="anonymous"
+  ></script>
+</div>
+{% endblock content %}

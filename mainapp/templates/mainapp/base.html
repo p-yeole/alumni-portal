@@ -1,0 +1,108 @@
+{% load static %} {% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Alumnite - {{ title }}</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+    {% block headscripts %} {% endblock %}
+  </head>
+
+  <body>
+    {% comment %} navbar {% endcomment %}
+    <div class="navbar">
+      <div class="navbar_logo">Alumnite</div>
+      <div class="navbar_links">
+        <ul class="navbar_list">
+          <li>
+            <a class="getstarted scrollto" href="{% url 'home-page' %}">Home</a>
+          </li>
+          <li>
+            <a class="getstarted scrollto" href="{% url 'events' %}">Events</a>
+          </li>
+          <li>
+            <a class="getstarted scrollto" href="{% url 'jobs' %}">Jobs</a>
+          </li>
+          {% if user.is_authenticated %}
+          <li>
+            <a href="{% url 'create-new' %}"
+              ><button class="btn btn-outline-light">Create New</button></a
+            >
+          </li>
+          <li>
+            <a class="getstarted scrollto" href="{% url 'logout' %}">Logout</a>
+          </li>
+          {% else %}
+          <li>
+            <a class="getstarted scrollto" href="{% url 'register' %}"
+              >Register</a
+            >
+          </li>
+          <li>
+            <a class="getstarted scrollto" href="{% url 'login' %}">Login</a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+      <div class="mobile_navbar_btn">
+        <ion-icon name="menu-outline" class="mobile_nav_icon"></ion-icon>
+        <ion-icon name="close-outline" class="mobile_nav_icon"></ion-icon>
+      </div>
+    </div>
+    <section id="hero" class="hero align-items-center">
+      {% block content %}{% endblock %}
+    </section>
+    {% comment %} footer {% endcomment %}
+    <div class="footer">
+      <div class="footer_left">
+        <img
+          src="https://kjsieit.somaiya.edu.in//assets/kjsieit/images/Logo/Somaiya-white.svg"
+          alt=""
+        />
+        <div class="footer_college_name">
+          k j somaiya institute of engineering & it
+        </div>
+        <div class="footer_college_address">
+          Somaiya Ayurvihar Complex, Eastern Express Highway, Near Everard
+          Nagar, Sion (East), Mumbai - 400 022
+        </div>
+        <div class="footer_college_numbers">91-22-24061408 / 24061403</div>
+        <div class="footer_college_email">info.tech@somaiya.edu</div>
+      </div>
+      <div class="footer_middle">home events jobs signup</div>
+      <div class="footer_right">
+        <div class="follow_us_text">follow us</div>
+        <div class="social_media_links">
+          <img
+            src="https://img.icons8.com/material-rounded/24/ffffff/facebook-f--v2.png"
+          />
+
+          <img
+            src="https://img.icons8.com/material-outlined/24/ffffff/instagram-new--v1.png"
+          />
+
+          <img
+            src="https://img.icons8.com/ios-glyphs/24/ffffff/twitter--v1.png"
+          />
+
+          <img
+            src="https://img.icons8.com/material-rounded/24/ffffff/youtube-play.png"
+          />
+
+          <img src="https://img.icons8.com/windows/32/ffffff/linkedin-2.png" />
+        </div>
+      </div>
+    </div>
+    {% block extrascripts %}{% endblock %}
+  </body>
+</html>

@@ -1,0 +1,18 @@
+{% extends 'mainapp/base.html' %} {% load static %} {% load crispy_forms_tags %}
+{% block content %}
+<div class="form mt-4">
+  <form method="POST">
+    {% csrf_token %}
+    <fieldset class="form-group">
+      <div class="heading mb-4">
+        <div class="heading_text"><span>Add A Job</span></div>
+        <div class="heading_dash"></div>
+      </div>
+      {{ form|crispy }}
+    </fieldset>
+    <div class="form-group">
+      <button class="btn btn-outline-info" type="submit">Add Job!</button>
+    </div>
+  </form>
+</div>
+{% endblock content %}
